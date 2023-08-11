@@ -12,13 +12,48 @@
     />
 
     <title>Frontend Mentor | Maker pre-launch landing page</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              backgroundcolor: "#080C20",
+              accent: "#3EE9E5",
+            },
+            backgroundImage: {
+              "hero-pattern": "url('./assets/bg-hero-squiggle.svg')",
+              "footer-texture": "url('./assets/bg-footer-squiggle.svg')",
+              "hero-mobile": "url('./assets/illustration-hero-mobile.png')",
+              "hero-left": "url('./assets/illustration-hero-left.png')",
+              "hero-right": "url('./assets/illustration-hero-right.png')",
+            },
+            fontfamily: {
+              manrope: "Manrope",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <header><img src="./assets/logo.svg" /></header>
-    <div class="intro">
-      <h1>Get paid for the work you <span>love</span> to do.</h1>
+  <body class="bg-backgroundcolor text-white font-manrope">
+    <header class="py-[81px] flex justify-center align-middle">
+      <img src="./assets/logo.svg" />
+    </header>
+    <div class="h-[233px] bg-hero-mobile bg-cover"></div>
+    <div class="intro p-2">
+      <h1 class="text-center text-3xl p-6">
+        Get paid for the work you <span class="text-accent">love</span> to do.
+      </h1>
 
-      <p>
+      <p class="">
         The 9-5 grind is so last century. We believe in living life on your own
         terms. Whether you’re looking to escape the rat race or set up a side
         hustle, we’ve got you covered.
@@ -26,7 +61,7 @@
       <img src="./assets/icon-scroll.svg" />
     </div>
 
-    <div class="benefits">
+    <div class="">
       <div>
         <img src="./assets/illustration-passions.svg" />
         <h3>Indulge your passions</h3>
@@ -35,7 +70,7 @@
           what you love.
         </p>
       </div>
-      <div>
+      <div class="">
         <img src="./assets/illustration-financial-freedom.svg" />
         <h3>Gain financial freedom</h3>
         <p>
@@ -43,7 +78,7 @@
           while you sleep.
         </p>
       </div>
-      <div>
+      <div class="">
         <img src="./assets/illustration-lifestyle.svg" />
         <h3>Choose your lifestyle</h3>
         <p>
@@ -95,7 +130,7 @@
       </ul>
     </div>
 
-    <footer>
+    <footer class="bg-footer-texture">
       <h2>Get notified when we launch</h2>
       <input placeholder="address" />
 
